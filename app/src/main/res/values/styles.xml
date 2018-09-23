@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="BottomNavigation">
+        <item name="android:background">#FFF</item>
+        <item name="itemBackground">@drawable/navigation_background</item>
+        <item name="itemIconTint">@color/navigation_bar_txt_color</item>
+        <item name="itemTextColor">@color/navigation_bar_txt_color</item>
+        <item name="paddingStart">5dp</item>
+        <item name="paddingEnd">5dp</item>
+    </style>
+
+    <style name="progress_bar_Style">
+        <item name="android:colorControlActivated" tools:targetApi="lollipop">#d5b8ff</item>
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">#d5b8ff</item>
+    </style>
+
+</resources>

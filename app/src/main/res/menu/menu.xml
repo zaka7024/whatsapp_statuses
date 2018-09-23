@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="الرئيسية"
+        android:icon="@drawable/ic_action_home"
+        android:id="@+id/home" />
+    <item
+        android:title="المفضلة"
+        android:icon="@drawable/ic_action_like"
+        android:id="@+id/liked" />
+    <item
+        android:title="اكتب"
+        android:icon="@drawable/ic_action_write"
+        android:id="@+id/write_post" />
+
+</menu>
