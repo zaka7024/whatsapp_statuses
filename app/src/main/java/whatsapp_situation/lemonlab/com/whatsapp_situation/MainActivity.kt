@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> {
                     replaceFragment(AddNoteFragment())
+                    var manager = supportFragmentManager.beginTransaction()
+                    manager.remove((favFragment()));
                     true
                 }
             }

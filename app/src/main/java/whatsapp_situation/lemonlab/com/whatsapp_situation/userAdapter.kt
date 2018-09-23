@@ -16,15 +16,15 @@ import whatsapp_situation.lemonlab.com.whatsapp_situation.data.user_note
 /**
  * Created by HP on 10/09/2018.
  */
-class userAdapter(var context: Context, var dataList:ArrayList<user_note>): RecyclerView.Adapter<userAdapter.viewHolder>(){
+class userAdapter(var context: Context?, var dataList:ArrayList<user_note>?): RecyclerView.Adapter<userAdapter.viewHolder>(){
 
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
-        holder.getData(dataList[position].text,dataList[position],position)
+        holder.getData(dataList!![position].text,dataList!![position],position)
         YoYo.with(Techniques.FadeIn).playOn(holder.itemView)
     }
 
     override fun getItemCount(): Int {
-        return dataList.size
+        return dataList!!.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
