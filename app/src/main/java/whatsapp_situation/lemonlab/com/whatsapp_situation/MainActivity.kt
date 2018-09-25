@@ -12,7 +12,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         replaceFragment(MainFragment())
+
         bottomNavigationView.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.home ->{
@@ -25,8 +27,8 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> {
                     replaceFragment(AddNoteFragment())
-                    var manager = supportFragmentManager.beginTransaction()
-                    manager.remove((favFragment()));
+                    /*var manager = supportFragmentManager.beginTransaction()
+                    manager.remove((favFragment()));*/
                     true
                 }
             }
