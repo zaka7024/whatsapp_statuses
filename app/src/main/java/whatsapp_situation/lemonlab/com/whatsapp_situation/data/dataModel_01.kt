@@ -277,7 +277,7 @@ class dataModel_01 {
             // different
             add(note("E","", 0))
 
-            // hello abed
+            // hello abed v0.2
         }
     }
 }
