@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/whatsapp_situation.iml" filepath="$PROJECT_DIR$/whatsapp_situation.iml" />
       <module fileurl="file://$PROJECT_DIR$/whatsapp_statuses.iml" filepath="$PROJECT_DIR$/whatsapp_statuses.iml" />
     </modules>
   </component>
