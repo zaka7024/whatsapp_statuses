@@ -34,7 +34,7 @@ class Adapter(var context:Context, var dataList:ArrayList<note>, var type:Char):
             holder.itemView.like_image.setImageResource(R.drawable.ic_action_like_selected)
             //db.loadDataFromDB()[position].liked = 1
         }
-        YoYo.with(Techniques.FadeIn).playOn(holder.itemView)
+        //YoYo.with(Techniques.FadeIn).playOn(holder.itemView)
     }
 
     override fun getItemCount(): Int {
