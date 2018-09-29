@@ -44,7 +44,57 @@ class TopicAdapter(var context:Context,var data:ArrayList<String>, var image:Arr
                     }
                     1 -> {
                         var manager = fragmnetManager.beginTransaction()
-                        manager.replace(R.id.fragmentContainer,UserFragment())
+                        manager.replace(R.id.fragmentContainer,Fragment02())
+                        manager.commit()
+                    }
+                    2 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment03())
+                        manager.commit()
+                    }
+                    3 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment04())
+                        manager.commit()
+                    }
+                    4 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment05())
+                        manager.commit()
+                    }
+                    5 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment06())
+                        manager.commit()
+                    }
+                    6 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment07())
+                        manager.commit()
+                    }
+                    7 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment08())
+                        manager.commit()
+                    }
+                    8 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment09())
+                        manager.commit()
+                    }
+                    9 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment10())
+                        manager.commit()
+                    }
+                    10 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment11())
+                        manager.commit()
+                    }
+                    11 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment12())
                         manager.commit()
                     }
                 }

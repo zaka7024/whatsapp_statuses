@@ -65,6 +65,13 @@ class DB_SQL_LITE(context:Context):SQLiteOpenHelper(context,"data.db",null, 1){
         db.delete("fav_table","id= ?", Array<String>(1){id})
     }
 
+    fun clear(){
+        var db = writableDatabase
+        for(i in dataModel_01.data){
+            db.delete("fav_table","id= ?", Array<String>(1){i.id})
+        }
+    }
+
     fun loadDataFromFavourites():ArrayList<note>{
         var db = this.readableDatabase
         var res = db.rawQuery("select * from fav_table", null)

@@ -22,13 +22,7 @@ class Fragment01() :Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
 
         var db = DB_SQL_LITE(context!!)
-        for(i in dataModel_01.data){
-            db.insertData("A",i.text,i.liked)
-        }
-        //db.insertData("A-1","بحبك ❤",0)
-        //db.insertData("A-2","صباح الخير يا تافه",0)
-        //db.insertData("B-1","بكرهك 🤦",0)
-        //db.insertData("B-2","تبًا لكم جميعًا",0)
+
 
         super.onActivityCreated(savedInstanceState)
         var layoutMnager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
