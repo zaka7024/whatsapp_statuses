@@ -50,6 +50,7 @@ class favAdapter(var context: Context, var dataList:ArrayList<note>): RecyclerVi
                 db.updateData(cuurentNote!!.id,0)
                 dataList.removeAt(cuurentPosition)
                 notifyItemRemoved(cuurentPosition)
+                notifyDataSetChanged()
             }
 
             itemView.setOnClickListener {
