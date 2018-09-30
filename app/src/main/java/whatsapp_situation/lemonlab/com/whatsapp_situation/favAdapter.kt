@@ -1,6 +1,9 @@
 package whatsapp_situation.lemonlab.com.whatsapp_situation
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
@@ -51,6 +54,19 @@ class favAdapter(var context: Context, var dataList:ArrayList<note>): RecyclerVi
                 dataList.removeAt(cuurentPosition)
                 notifyItemRemoved(cuurentPosition)
                 notifyDataSetChanged()
+            }
+
+            itemView.share_iamgeView.setOnClickListener {
+                var intent =  Intent(Intent.ACTION_SEND)
+                intent.type = "text/plain"
+                context?.startActivity(Intent.createChooser(intent,"مشاركة لـ"))
+            }
+
+            itemView.copy_imageView.setOnClickListener {
+                var myClip = ClipData.newPlainText("text", cuurentNote!!.text);
+                var myClipboard: ClipboardManager = (context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?)!!;
+                myClipboard?.setPrimaryClip(myClip)
+                Toast.makeText(context,"تم النسخ",Toast.LENGTH_SHORT).show()
             }
 
             itemView.setOnClickListener {
