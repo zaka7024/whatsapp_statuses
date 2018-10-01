@@ -14,6 +14,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.item_layout.view.*
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.DB_SQL_LITE
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.favourites
@@ -53,13 +54,17 @@ class Adapter(var context:Context, var dataList:ArrayList<note>, var type:Char):
         init{
             itemView.like_image.setOnClickListener {
                 if(cuurentNote!!.liked == 1){
-                    Toast.makeText(context,"تم الحذف من المفضلة",Toast.LENGTH_SHORT).show()
+                    Toasty.custom(context, "تم الحذف من المفضلة", R.drawable.ic_action_check, context.resources.getColor(R.color.purble), 1000, true,
+                            true).show();
+                    //Toast.makeText(context,"تم الحذف من المفضلة",Toast.LENGTH_SHORT).show()
                     itemView.like_image.setImageResource(R.drawable.ic_action_like)
                     cuurentNote!!.liked = 0
                     db.deleteData(cuurentNote!!.id)
                     db.updateData(cuurentNote!!.id,0)
                 }else{
-                    Toast.makeText(context,"تم الاضافة الى المفضلة",Toast.LENGTH_SHORT).show()
+                    Toasty.custom(context, "تم الاضافة الى المفضلة", R.drawable.ic_action_check, context.resources.getColor(R.color.purble), 1000, true,
+                            true).show();
+                    //Toast.makeText(context,"تم الاضافة الى المفضلة",Toast.LENGTH_SHORT).show()
                     itemView.like_image.setImageResource(R.drawable.ic_action_like_selected)
                     db.insertDataFavourites(cuurentNote!!.id,cuurentNote!!.text,1)
                     db.updateData(cuurentNote!!.id,1)
@@ -78,11 +83,9 @@ class Adapter(var context:Context, var dataList:ArrayList<note>, var type:Char):
                 var myClip = ClipData.newPlainText("text", cuurentNote!!.text);
                 var myClipboard:ClipboardManager = (context.getSystemService(CLIPBOARD_SERVICE) as ClipboardManager?)!!;
                 myClipboard?.setPrimaryClip(myClip)
-                Toast.makeText(context,"تم النسخ",Toast.LENGTH_SHORT).show()
-            }
-
-            itemView.setOnClickListener {
-                Toast.makeText(context,cuurentNote!!.id,Toast.LENGTH_SHORT).show()
+                Toasty.custom(context, "تم النسخ", R.drawable.ic_action_check, context.resources.getColor(R.color.purble), 1000, true,
+                        true).show();
+                //Toast.makeText(context,"تم النسخ",Toast.LENGTH_SHORT).show()
             }
         }
 

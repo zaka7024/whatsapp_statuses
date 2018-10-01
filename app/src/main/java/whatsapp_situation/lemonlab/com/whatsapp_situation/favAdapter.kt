@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.item_layout.view.*
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.DB_SQL_LITE
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.note
@@ -66,11 +67,8 @@ class favAdapter(var context: Context, var dataList:ArrayList<note>): RecyclerVi
                 var myClip = ClipData.newPlainText("text", cuurentNote!!.text);
                 var myClipboard: ClipboardManager = (context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?)!!;
                 myClipboard?.setPrimaryClip(myClip)
-                Toast.makeText(context,"تم النسخ",Toast.LENGTH_SHORT).show()
-            }
-
-            itemView.setOnClickListener {
-                Toast.makeText(context, cuurentPosition.toString(), Toast.LENGTH_SHORT).show()
+                Toasty.success(context, "تم النسخ", Toast.LENGTH_SHORT, true).show();
+                //Toast.makeText(context,"تم النسخ",Toast.LENGTH_SHORT).show()
             }
         }
 
