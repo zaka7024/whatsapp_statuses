@@ -22,4 +22,11 @@
         <item name="android:colorControlNormal" tools:targetApi="lollipop">#d5b8ff</item>
     </style>
 
+    <style name="editText_bar_Style">
+        <item name="android:colorControlActivated" tools:targetApi="lollipop">#FFF</item>
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">#FFF</item>
+        <item name="android:textColor">#FFF</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
 </resources>

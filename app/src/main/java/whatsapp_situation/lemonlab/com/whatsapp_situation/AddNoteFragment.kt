@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.google.firebase.database.FirebaseDatabase
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.add_note_layout.*
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.TopicAdapter
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.topic
@@ -28,14 +29,21 @@ class AddNoteFragment() : Fragment() {
 
 
         send_user_note_btn.setOnClickListener {
+
+            if(user_note_textView.text.trim().isEmpty()){
+                Toasty.error(context!!,"نص فارغ",Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             var data = FirebaseDatabase.getInstance().getReference("user_notes")
             progressbar_add_note_layout.visibility = View.VISIBLE
             var note_id = data.push().key
             var new_note = user_note(note_id,user_note_textView.text.toString())
+
             data.child(note_id).setValue(new_note).addOnCompleteListener {
                 progressbar_add_note_layout.visibility = View.INVISIBLE
-                Toast.makeText(context!!,"تم " +
-                        "تم إرسال حالتك",Toast.LENGTH_SHORT).show()
+                Toasty.custom(context!!, "تم إرسال حالتك", R.drawable.ic_action_check, context!!.resources.getColor(R.color.purble), 1000, true,
+                        true).show();
             }
         }
     }
