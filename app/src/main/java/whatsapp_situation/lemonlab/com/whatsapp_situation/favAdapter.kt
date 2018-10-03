@@ -68,7 +68,8 @@ class favAdapter(var context: Context, var dataList:ArrayList<note>): RecyclerVi
                 var myClip = ClipData.newPlainText("text", cuurentNote!!.text);
                 var myClipboard: ClipboardManager = (context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?)!!;
                 myClipboard?.setPrimaryClip(myClip)
-                Toasty.success(context, "تم النسخ", Toast.LENGTH_SHORT, true).show();
+                Toasty.custom(context, "تم النسخ", R.drawable.ic_action_check, context.resources.getColor(R.color.purble), 1000, true,
+                        true).show()
                 //Toast.makeText(context,"تم النسخ",Toast.LENGTH_SHORT).show()
             }
         }

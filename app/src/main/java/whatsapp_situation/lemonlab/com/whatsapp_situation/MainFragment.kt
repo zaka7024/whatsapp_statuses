@@ -45,9 +45,9 @@ class MainFragment() : Fragment() {
 
         var layoutmanager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
         var gridManager = GridLayoutManager(context,2)
-        var adapter = TopicAdapter(context!!, topic.topic_data, topic.topic_images,activity!!.supportFragmentManager!!)
+        var adapter = TopicAdapter(context!!, topic.topic_data,activity!!.supportFragmentManager!!)
 
-        mainFragementRecylerView.layoutManager = layoutmanager
+        mainFragementRecylerView.layoutManager = gridManager
         mainFragementRecylerView.adapter = adapter
     }
 }

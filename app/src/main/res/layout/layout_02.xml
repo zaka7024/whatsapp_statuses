@@ -13,7 +13,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/cairo"
-        android:text="لا يوجد حالات مفضلة الى حد الان"
+        android:text="لم تضع اي حالة في المفضلة بعد"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/fav_imageView"
         app:layout_constraintEnd_toEndOf="parent"

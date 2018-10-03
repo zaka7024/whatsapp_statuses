@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context="whatsapp_situation.lemonlab.com.whatsapp_situation.MainActivity">
 
+  <com.google.android.gms.ads.AdView
+      xmlns:ads="http://schemas.android.com/apk/res-auto"
+      android:id="@+id/MainadView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_alignParentBottom="true"
+      ads:adSize="SMART_BANNER"
+      ads:adUnitId="ca-app-pub-9769401692194876/1996389718">
+  </com.google.android.gms.ads.AdView>
+
   <android.support.design.widget.BottomNavigationView
       android:id="@+id/bottomNavigationView"
       android:layout_width="match_parent"
@@ -18,16 +29,16 @@
 
   </android.support.design.widget.BottomNavigationView>
 
-  <FrameLayout
-      android:id="@+id/fragmentContainer"
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="1.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent">
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MainadView">
 
-  </FrameLayout>
+    </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>

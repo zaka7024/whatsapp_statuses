@@ -38,14 +38,12 @@ class UserFragment() : Fragment() {
         // connect to firsbaseDatabase
 
         var data = FirebaseDatabase.getInstance().getReference("user_notes")
-
-
         data.addValueEventListener(object : ValueEventListener{
-            override fun onCancelled(p0: DatabaseError?) {
+            override fun onCancelled(p0: DatabaseError) {
                 Toast.makeText(context,"تأكد من اتصالك بالشبكة",Toast.LENGTH_SHORT).show()
             }
 
-            override fun onDataChange(p0: DataSnapshot?) {
+            override fun onDataChange(p0: DataSnapshot) {
                 items!!.clear()
                 if(p0!!.exists()){
                     for(item in p0!!.children){
@@ -56,8 +54,6 @@ class UserFragment() : Fragment() {
                 adapter!!.notifyDataSetChanged()
             }
         })
-
-
     }
 
     fun initRecyclerView(){

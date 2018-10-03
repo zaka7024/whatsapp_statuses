@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-    <color name="navigation_bar_item_bg" tools:ignore="ReferenceType">@drawable/navigation_background</color>
-    <color name="navigation_bar_txt_color" tools:ignore="ReferenceType">@drawable/navgation_selector</color>
-    <color name="red">#F00</color>
-    <color name="purble">#be90d4</color>
+
+  <color name="colorPrimary">#3F51B5</color>
+
+  <color name="colorPrimaryDark">#303F9F</color>
+
+  <color name="colorAccent">#FF4081</color>
+
+  <color name="navigation_bar_item_bg" tools:ignore="ReferenceType">@drawable/navigation_background</color>
+
+  <color name="navigation_bar_txt_color" tools:ignore="ReferenceType">@drawable/navgation_selector</color>
+
+  <color name="red">#F00</color>
+
+  <color name="purble">#be90d4</color>
+
 </resources>

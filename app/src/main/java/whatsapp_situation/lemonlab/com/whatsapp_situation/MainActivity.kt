@@ -16,6 +16,12 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
 
     replaceFragment(MainFragment())
+
+    // INTI THE ADVIEW
+
+      var request = AdRequest.Builder().build()
+      MainadView.loadAd(request)
+
       lateinit var mInterstitialAd: InterstitialAd
       mInterstitialAd = InterstitialAd(this@MainActivity)
       mInterstitialAd.adUnitId = "ca-app-pub-9769401692194876/7456298633"

@@ -49,6 +49,50 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626763658544:android:2c3b39015bbf60e2",
+        "android_client_info": {
+          "package_name": "com.lemonlab.whatsappsituation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "626763658544-j6f2mm9n3q0ebmugnbfo0pk2kbjhoc88.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lemonlab.whatsappsituation",
+            "certificate_hash": "3f994a6ab52a430044869b536433f7456ab5cd0d"
+          }
+        },
+        {
+          "client_id": "626763658544-huco9ub3hntgdrnma8b45o6cc8mar824.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVYjq_Iwi_V_Wx4bBZSUl-XImW1KhL3Dc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "626763658544-huco9ub3hntgdrnma8b45o6cc8mar824.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"

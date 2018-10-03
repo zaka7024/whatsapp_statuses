@@ -14,10 +14,10 @@ import whatsapp_situation.lemonlab.com.whatsapp_situation.*
 /**
  * Created by HP on 12/09/2018.
  */
-class TopicAdapter(var context:Context,var data:ArrayList<String>, var image:ArrayList<Int>, val fragmnetManager:android.support.v4.app.FragmentManager)
+class TopicAdapter(var context:Context,var data:ArrayList<String>, val fragmnetManager:android.support.v4.app.FragmentManager)
     :RecyclerView.Adapter<TopicAdapter.viewHolder>(){
     override fun onBindViewHolder(holder: viewHolder, position: Int) {
-        holder.getData(data[position], image[position], position)
+        holder.getData(data[position], position)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
@@ -35,7 +35,6 @@ class TopicAdapter(var context:Context,var data:ArrayList<String>, var image:Arr
         var cuurentPosition = 0
         init{
             itemview.setOnClickListener {
-                Toast.makeText(context,cuurentItem,Toast.LENGTH_SHORT).show()
                 when(cuurentPosition){
                     0 -> {
                         var manager = fragmnetManager.beginTransaction()
@@ -123,15 +122,12 @@ class TopicAdapter(var context:Context,var data:ArrayList<String>, var image:Arr
                         manager.commit()
                     }
                 }
-                if(cuurentItem == "حالات ضحك"){
-
-                }
             }
         }
 
-        fun getData(title:String,Background:Int, pos:Int){
+        fun getData(title:String, pos:Int){
             itemView.topic_textView.text = title
-            itemView.topic_imageView.setImageResource(Background)
+            //itemView.topic_imageView.setImageResource(Background)
             cuurentItem = title
             cuurentPosition = pos
         }
