@@ -13,6 +13,8 @@ import kotlinx.android.synthetic.main.add_note_layout.*
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.TopicAdapter
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.topic
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.user_note
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 /**
  * Created by HP on 10/09/2018.
@@ -27,6 +29,8 @@ class AddNoteFragment() : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
 
+        var request = AdRequest.Builder().build()
+        adView.loadAd(request)
 
         send_user_note_btn.setOnClickListener {
 

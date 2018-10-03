@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.View
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.InterstitialAd
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -14,10 +16,16 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
 
     replaceFragment(MainFragment())
-
+      lateinit var mInterstitialAd: InterstitialAd
+      mInterstitialAd = InterstitialAd(this@MainActivity)
+      mInterstitialAd.adUnitId = "ca-app-pub-9769401692194876/7456298633"
+      mInterstitialAd.loadAd(AdRequest.Builder().build())
     bottomNavigationView.setOnNavigationItemSelectedListener {
       when(it.itemId){
         R.id.home ->{
+          if (mInterstitialAd.isLoaded) {
+            mInterstitialAd.show()
+          }
           replaceFragment(MainFragment())
           true
         }
