@@ -84,7 +84,7 @@ class Adapter(var context:Context, var dataList:ArrayList<note>, var type:Char):
                 var myClipboard:ClipboardManager = (context.getSystemService(CLIPBOARD_SERVICE) as ClipboardManager?)!!;
                 myClipboard?.setPrimaryClip(myClip)
                 Toasty.custom(context, "تم النسخ", R.drawable.ic_action_check, context.resources.getColor(R.color.purble), 1000, true,
-                        true).show();
+                        true).show()
                 //Toast.makeText(context,"تم النسخ",Toast.LENGTH_SHORT).show()
             }
         }

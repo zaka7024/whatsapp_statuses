@@ -15,15 +15,15 @@ class topic {
             add("حالات منوعة")
             add("حالات حكم")
             add("حالات الى الام")
-            add("امثال شعبية")
             add("حالات الصباح")
+            add("امثال شعبية")
+            add("منشورات مسائية")
             add("حالات دعاء")
             add("حالات دينية")
             add("حالات ضحك")
-            add("حالات حكم")
             add("حالات رمضان")
             add("منشورات العيد")
-            add("منشورات مسائية")
+            add("منشورات المتابعين")
 
         }
 
@@ -34,14 +34,16 @@ class topic {
            add(R.drawable.image4) // friends
            add(R.drawable.different) // different
            add(R.drawable.wisdom) // wisdom
-            add(R.drawable.image2) // mother
-           add(R.drawable.image7)  // morning
-           add(R.drawable.quotes) // quotes
+           add(R.drawable.image2) // mother
+            add(R.drawable.image7)  // morning
+           add(R.drawable.arabic_calligraphy) // people
+            add(R.drawable.image5) // night
            add(R.drawable.dooa) // Doa'a
            add(R.drawable.allah) // islamic
            add(R.drawable.joke) /// joke
            add(R.drawable.image3) // ramadan
            add(R.drawable.eid) // eid
+           add(R.drawable.followers) // followers
         }
     }
 }

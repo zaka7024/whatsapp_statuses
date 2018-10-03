@@ -87,7 +87,7 @@ class TopicAdapter(var context:Context,var data:ArrayList<String>, var image:Arr
                         manager.replace(R.id.fragmentContainer,Fragment10())
                         manager.commit()
                     }
-                    10 -> {
+                    0 -> {
                         var manager = fragmnetManager.beginTransaction()
                         manager.replace(R.id.fragmentContainer,Fragment11())
                         manager.commit()
@@ -95,6 +95,31 @@ class TopicAdapter(var context:Context,var data:ArrayList<String>, var image:Arr
                     11 -> {
                         var manager = fragmnetManager.beginTransaction()
                         manager.replace(R.id.fragmentContainer,Fragment12())
+                        manager.commit()
+                    }
+                    12 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment13())
+                        manager.commit()
+                    }
+                    13 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment14())
+                        manager.commit()
+                    }
+                    14 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,Fragment15())
+                        manager.commit()
+                    }
+                    15 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,UserFragment())
+                        manager.commit()
+                    }
+                    16 -> {
+                        var manager = fragmnetManager.beginTransaction()
+                        manager.replace(R.id.fragmentContainer,UserFragment())
                         manager.commit()
                     }
                 }

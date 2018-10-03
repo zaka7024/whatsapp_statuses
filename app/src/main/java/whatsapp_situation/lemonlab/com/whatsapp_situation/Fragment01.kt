@@ -27,7 +27,6 @@ class Fragment01() :Fragment() {
         super.onActivityCreated(savedInstanceState)
         var layoutMnager = LinearLayoutManager(context,LinearLayoutManager.VERTICAL,false)
         var adapter = Adapter(context!!,db.loadDataFromDB('A'),'A')
-
         recyclerView_01.layoutManager = layoutMnager
         recyclerView_01.adapter = adapter
 

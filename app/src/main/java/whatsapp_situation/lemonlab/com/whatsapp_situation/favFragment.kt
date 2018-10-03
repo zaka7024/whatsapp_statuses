@@ -27,6 +27,14 @@ class favFragment : Fragment() {
         var layoutMnager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL,false)
         var adapter = favAdapter(context!!, db.loadDataFromFavourites())
 
+        if(adapter.dataList.size > 0){
+            fav_imageView.visibility = View.INVISIBLE
+            hint_textView.visibility = View.INVISIBLE
+        }else{
+            fav_imageView.visibility = View.VISIBLE
+            hint_textView.visibility = View.VISIBLE
+        }
+
         favRecyclerView.layoutManager = layoutMnager
         favRecyclerView.adapter = adapter
     }

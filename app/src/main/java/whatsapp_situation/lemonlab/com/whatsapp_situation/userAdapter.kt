@@ -1,6 +1,9 @@
 package whatsapp_situation.lemonlab.com.whatsapp_situation
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.item_layout.view.*
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.DB_SQL_LITE
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.note
@@ -39,8 +43,19 @@ class userAdapter(var context: Context?, var dataList:ArrayList<user_note>?): Re
         init{
             itemView.like_image.visibility = View.INVISIBLE
 
-            itemView.setOnClickListener {
-                Toast.makeText(context, cuurentPosition.toString(), Toast.LENGTH_SHORT).show()
+            itemView.share_iamgeView.setOnClickListener {
+                var intent = Intent(Intent.ACTION_SEND)
+                intent.type = "text/plain"
+                intent.putExtra(Intent.EXTRA_TEXT,cuurentNote!!.text)
+                context!!.startActivity(Intent.createChooser(intent,"مشاركة الى:"))
+            }
+
+            itemView.copy_imageView.setOnClickListener {
+                var myClip = ClipData.newPlainText("text", cuurentNote!!.text);
+                var myClipboard: ClipboardManager = (context!!.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?)!!;
+                myClipboard?.setPrimaryClip(myClip)
+                Toasty.custom(context!!, "تم النسخ", R.drawable.ic_action_check, context!!.resources.getColor(R.color.purble), 1000, true,
+                        true).show()
             }
         }
 

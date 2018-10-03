@@ -14,6 +14,7 @@ import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import es.dmoral.toasty.Toasty
 import kotlinx.android.synthetic.main.item_layout.view.*
+import kotlinx.android.synthetic.main.layout_02.*
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.DB_SQL_LITE
 import whatsapp_situation.lemonlab.com.whatsapp_situation.data.note
 

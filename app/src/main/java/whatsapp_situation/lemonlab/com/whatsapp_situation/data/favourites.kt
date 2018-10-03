@@ -5,8 +5,8 @@ package whatsapp_situation.lemonlab.com.whatsapp_situation.data
  */
 object favourites {
 
-    var favourites_data:ArrayList<note> = ArrayList<note>().apply {
-        add(note("","this is fave note",1))
-    }
+     var favourites_data:ArrayList<note> = ArrayList<note>().apply {
+          add(note("","this is fave note",1))
+     }
 
 }

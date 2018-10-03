@@ -9,35 +9,35 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
 
-        replaceFragment(MainFragment())
+    replaceFragment(MainFragment())
 
-        bottomNavigationView.setOnNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.home ->{
-                    replaceFragment(MainFragment())
-                    true
-                }
-                R.id.liked ->{
-                    replaceFragment(favFragment())
-                    true
-                }
-                else -> {
-                    replaceFragment(AddNoteFragment())
-                    /*var manager = supportFragmentManager.beginTransaction()
-                    manager.remove((favFragment()));*/
-                    true
-                }
-            }
+    bottomNavigationView.setOnNavigationItemSelectedListener {
+      when(it.itemId){
+        R.id.home ->{
+          replaceFragment(MainFragment())
+          true
         }
+        R.id.liked ->{
+          replaceFragment(favFragment())
+          true
+        }
+        else -> {
+          replaceFragment(AddNoteFragment())
+          /*var manager = supportFragmentManager.beginTransaction()
+          manager.remove((favFragment()));*/
+          true
+        }
+      }
     }
+  }
 
-    fun replaceFragment(fragment:Fragment){
-        var manager = supportFragmentManager.beginTransaction()
-        manager.replace(R.id.fragmentContainer,fragment)
-        manager.commit()
-    }
+  fun replaceFragment(fragment:Fragment){
+    var manager = supportFragmentManager.beginTransaction()
+    manager.replace(R.id.fragmentContainer,fragment)
+    manager.commit()
+  }
 }
